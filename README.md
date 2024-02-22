@@ -1,3 +1,26 @@
+# Installation via Docker
+
+1. Clone the repository in the same directory as your docker compose services:
+```shell
+git clone git@github.com:WallaceSocietyOrg/ShareAsQRcode-concept.git
+```
+2. Create `docker-compose.yaml`:
+```yaml
+version: '3.7'
+services:
+  app:
+    container_name: shareasqrcode
+    build:
+      context: ./ShareAsQRcode-concept
+    ports:
+      - '8080:80'
+```
+3. Start the container:
+```shell
+docker compose up -d
+```
+4. The service is now running at `http://localhost:8080`
+
 # Svelte + TS + Vite
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
